@@ -21,6 +21,8 @@
     --txt-small: 12px;
     --txt-medium: 14px;
     --txt-large: 16px;
+
+    /* https://www.figma.com/file/vTVSqhxNCkB4PhsUEBGNqh/ToDo-List-•-Desafio-React-(Copy)?type=design&node-id=4130-491&mode=design&t=M1WP2qbMrRN7FWyB-0 */
 }
 
 body, input, textarea, button {
