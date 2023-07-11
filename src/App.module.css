@@ -1,6 +1,8 @@
+@import url('./globals.css');
+
 .layout{
-    width: 1440px;
-    margin: auto auto;
-    padding: 0 1rem;
-    background: black;
+    min-width: 100vw;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: red;
 }

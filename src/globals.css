@@ -25,6 +25,12 @@
     /* https://www.figma.com/file/vTVSqhxNCkB4PhsUEBGNqh/ToDo-List-•-Desafio-React-(Copy)?type=design&node-id=4130-491&mode=design&t=M1WP2qbMrRN7FWyB-0 */
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body, input, textarea, button {
     font-family:'Inter', sans-serif;
     line-height: 140%;
