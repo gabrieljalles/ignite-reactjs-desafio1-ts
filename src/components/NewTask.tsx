@@ -1,9 +1,27 @@
 import styles from './NewTask.module.css'
-import { FormEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
 import { PlusCircle } from 'phosphor-react';
 
 
+interface Content {
+    finished: boolean;
+    content: string;
+}
+
+export interface TaskType {
+    id: number;
+    content: Content[];
+}
+
+interface TaskProps {
+    task: TaskType;
+}
+
+
+
 export const NewTask = () => {
+
+    const [tasks, setTasks] = useState(['']);
 
     const [newTaskText, setNewTaskText] = useState('');
 
@@ -14,7 +32,14 @@ export const NewTask = () => {
         event.preventDefault()
 
         setTasks([...tasks, newTaskText]);
+
         setNewTaskText('');
+
+    }
+
+    function handleNewTaskChange(event: ChangeEvent<HTMLTextAreaElement>){
+        event.target.setCustomValidity('');
+        setNewTaskText(event.target.value);
     }
 
     return (
@@ -24,6 +49,7 @@ export const NewTask = () => {
                     placeholder="Create a new task"
                     maxLength={70}
                     value={newTaskText}
+                    onChange={ handleNewTaskChange}
                     required
                 />
                 <div>
