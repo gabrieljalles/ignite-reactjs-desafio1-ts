@@ -1,0 +1,39 @@
+@import url(../globals.css);
+
+.newTask{
+    display: flex;
+    margin-top: 200px;
+    position: absolute;
+    gap: 8px;
+}
+
+.newTask input {
+    width: 40rem;
+    height: 54px;
+    border-radius: 8px;
+    border: 1px solid var(--gray-700);
+    background: var(--gray-500);
+    text-decoration: none;
+    
+    font-size: var(--txt-large);
+    padding: 0 1rem;
+}
+
+.newTask input:focus{
+    outline: none !important;
+    border: 1px solid var(--purple-dark);
+}
+
+.newTask button {
+    height: 54px;
+    background: var(--blue-dark);
+    color: var(--gray-100);
+}
+
+.newTask button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
+    font-weight: bold;
+}
