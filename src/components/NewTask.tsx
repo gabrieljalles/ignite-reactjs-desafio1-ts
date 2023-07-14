@@ -26,7 +26,7 @@ export const NewTask = () => {
     const [newTaskText, setNewTaskText] = useState('');
 
     const isNewTaskEmpty = newTaskText.length === 0;
-    
+
 
     function handleCreateNewTask(event: FormEvent) {
         event.preventDefault()
@@ -37,27 +37,27 @@ export const NewTask = () => {
 
     }
 
-    function handleNewTaskChange(event: ChangeEvent<HTMLTextAreaElement>){
+    function handleNewTaskChange(event: ChangeEvent<HTMLTextAreaElement>) {
         event.target.setCustomValidity('');
         setNewTaskText(event.target.value);
     }
 
     return (
-            <form onSubmit={handleCreateNewTask} className={styles.newTask}>
-                <input
-                    name="task"
-                    placeholder="Create a new task"
-                    maxLength={70}
-                    value={newTaskText}
-                    onChange={ handleNewTaskChange}
-                    required
-                />
-                <div>
-                    <button type="submit" disabled={isNewTaskEmpty}>
-                        Create
-                        <PlusCircle size={20} />
-                    </button>
-                </div>
-            </form>
+        <form onSubmit={handleCreateNewTask} className={styles.newTask}>
+            <input
+                name="task"
+                placeholder="Create a new task"
+                maxLength={70}
+                value={newTaskText}
+                onChange={handleNewTaskChange}
+                required
+            />
+            <div>
+                <button type="submit" disabled={isNewTaskEmpty}>
+                    Create
+                    <PlusCircle size={20} />
+                </button>
+            </div>
+        </form>
     )
 }

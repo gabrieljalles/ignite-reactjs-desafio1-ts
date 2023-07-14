@@ -8,14 +8,14 @@ function App() {
   const tasks: TaskType[] = [
     {
       id: 1,
-      content:[
-        {finished: false, content:'Take the dog to the vet'},
+      content: [
+        { finished: false, content: 'Take the dog to the vet' },
       ],
     },
     {
       id: 1,
-      content:[
-        {finished: false, content:'wash the dishes'},
+      content: [
+        { finished: false, content: 'wash the dishes' },
       ],
     }
   ]
@@ -24,18 +24,39 @@ function App() {
     <div className={styles.layout}>
       <Header />
 
-      <main>
+      <main className={styles.main}>
+
+        <section className={styles.panel}>
+
+          <div>
+            <span>Tarefas criadas</span>
+            <span>0</span>
+          </div>
+
+          <div>
+            <span>Concluídas</span>
+            <span>0</span>
+          </div>
+
+        </section>
+
+        <section>
+
+
           {tasks.map(task => {
             return (
-              <Task 
-                key =  {task.id}
-                task = {task}
+              <Task
+                key={task.id}
+                task={task}
               />
             )
           })}
+
+        </section>
+
       </main>
-      
-    </div>
+
+    </div >
   )
 }
 
