@@ -1,3 +1,30 @@
 .task{
-    
+    display: flex;
+    justify-content: space-between;
+    background: var(--gray-500);
+    padding: 1rem;
+    margin-top: 0.75rem;
+    border: 1px solid var(--gray-400);
+    border-radius: 8px;
+    align-items: flex-start;
+}
+
+.task input{
+    width: 24px;
+}
+
+.content {
+    margin: 0 1rem;
+    font-size: 14px;
+}
+
+.task button {
+    background: transparent;
+    background-size:cover;
+    line-height: 0;
+    padding: 0;
+}
+
+.task button:hover {
+    color: var(--blue); 
 }

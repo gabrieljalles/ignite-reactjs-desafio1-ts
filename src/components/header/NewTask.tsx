@@ -37,7 +37,7 @@ export const NewTask = () => {
 
     }
 
-    function handleNewTaskChange(event: ChangeEvent<HTMLTextAreaElement>) {
+    function handleNewTaskChange(event: ChangeEvent<HTMLInputElement>) {
         event.target.setCustomValidity('');
         setNewTaskText(event.target.value);
     }

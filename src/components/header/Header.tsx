@@ -1,5 +1,5 @@
 import styles from './Header.module.css';
-import toDoLogo from '../assets/todo-logo.svg';
+import toDoLogo from '../../assets/todo-logo.svg';
 import { NewTask } from './NewTask';
 
 export const Header = () => {

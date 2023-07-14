@@ -1,43 +1,34 @@
 import styles from './Task.module.css'
 import { FormEvent, useState } from 'react';
-
-interface Content {
-    finished: boolean;
-    content: string;
-}
-
-export interface TaskType {
-    id: number;
-    content: Content[];
-}
+import { Trash } from 'phosphor-react';
 
 interface TaskProps {
-    task: TaskType;
+    content: string;
+    onDeleteTask: (task: string) => void;
 }
 
-export function Task({ task }: TaskProps) {
+export function Task({ content, onDeleteTask }: TaskProps) {
 
-    
+    function handleDeleteTask(){
+        onDeleteTask(content);
+    }
 
     return (
-            <article className={styles.post}>
-                <main>
-                    <button>
-                            ola mundo
-                    </button>
+            <article className={styles.task}>
 
-                    <div className={styles.content}>
-
-                        {task.content.map(text => {
-
-                            return ( <p key={text.content}>
-                                        {text.content}
-                                    </p>
-                            )
-                                
-                        })}
+                    <div>
+                        <input type="radio" />
                     </div>
-                </main>
+    
+                    <div className={styles.content}>
+                        <p key={content}>
+                            {content}
+                        </p>   
+                    </div>
+
+                    <button title="task delete" onClick={handleDeleteTask}>
+                        <Trash size={20} />
+                    </button>
             </article>
     )
 }
